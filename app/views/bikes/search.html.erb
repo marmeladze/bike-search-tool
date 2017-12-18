@@ -1,0 +1,22 @@
+<div class="row text-center">
+  <%= form_tag search_bikes_path, :method => 'get' do %>
+      <% Tag.all.each do |tag| %>
+        <div class="large-3 columns">
+          <%= check_box_tag "tag_id[]", tag.id %>
+            <%= tag.name %>
+        </div>
+      <% end %>
+      <%= submit_tag "Search", class: "button" %>
+  <% end %>
+</div>
+<div class="row text-center">
+  <%  @bikes.each do |bike| %>
+    <div class="row">
+      <div class="large-5 columns">
+        Score: <%= bike[:score] %>
+        Matching : <%= bike[:matching].join(", ") %>
+        Url: <%= bike[:manufacturer_url] %>
+      </div>
+    </div>
+  <% end %>
+</div>

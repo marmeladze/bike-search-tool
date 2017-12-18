@@ -1,0 +1,29 @@
+<div class="row text-center">
+  <%= form_for(@bike) do |f| %>
+    <% if @bike.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@bike.errors.count, "error") %> prohibited this bike from being saved:</h2>
+
+        <ul>
+        <% @bike.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="large-10 large-centered columns">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.label :manufacturer_url %><br>
+      <%= f.text_field :manufacturer_url %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :all_tags, placeholder: "Tags separated with comma" %> 
+    </div> 
+    <div class="large-10 large-centered columns">
+      <%= f.submit "Submit", class: "button" %>
+    </div>
+  <% end %>
+</div>
