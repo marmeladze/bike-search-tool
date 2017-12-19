@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  before_save :uniquize_features!
+  #before_save :uniquize_features!
   validates :name, uniqueness: true
   validates :name, :manufacturer_url, presence: true
 
