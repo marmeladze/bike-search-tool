@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :fetch_features, only: [:show, :search, :edit]
   # GET /products
   # GET /products.json
   def index
@@ -8,7 +8,6 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @features = Product.pluck(:features).flatten.uniq
     @selected = params[:feature].presence
     products = Product.where.overlap(features: params[:feature])
     @products = @selected ? products.sort_by{|prod| prod.score_for(params[:feature]) }.reverse : nil
@@ -30,8 +29,6 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    features_array =  product_params["features"].split(" ").map(&:downcase!)
-    new_params = product_params.merge!({features: features_array})
     @product = Product.new(product_params)
     respond_to do |format|
       if @product.save
@@ -47,10 +44,8 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    features_array =  product_params["features"].split(" ").map(&:downcase!)
-    new_params = product_params.merge!({features: features_array})
     respond_to do |format|
-      if @product.update(new_params)
+      if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
@@ -71,6 +66,9 @@ class ProductsController < ApplicationController
   end
 
   private
+    def fetch_features
+      @features = Product.pluck(:features).flatten.uniq
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
@@ -78,6 +76,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :manufacturer_url, :features)
+      params.require(:product).permit(:name, :manufacturer_url, :features_list)
     end
 end

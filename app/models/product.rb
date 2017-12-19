@@ -1,7 +1,18 @@
 class Product < ActiveRecord::Base
-  #before_save :uniquize_features!
   validates :name, uniqueness: true
   validates :name, :manufacturer_url, presence: true
+
+  def features_list
+    self.features.join(" ")
+  end
+
+  def features_list=(text)
+    self.features = []
+    text.split(" ").map(&:downcase).uniq.each do |f|
+      self.features << f.presence
+    end
+    save!
+  end
 
   def matched_against ary
     features & ary
@@ -14,7 +25,6 @@ class Product < ActiveRecord::Base
   private 
 
   def uniquize_features!
-    all_features = features.uniq!
-    update_attributes!(features: all_features)
+
   end
 end
