@@ -18,7 +18,7 @@
         <div class="well">
           <%= number_to_percentage(product.score_for(@selected)*100, precision: 0) %> match: <%= product.name %>
           <br>
-          Matches <%= flattened product.matched_against(@selected) %>
+          Matches <%= flattened(product.matched_against(@selected)).html_safe %>
           <br>
           Link: <%= product.manufacturer_url %>
         </div>
