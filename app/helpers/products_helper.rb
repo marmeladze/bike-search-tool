@@ -4,6 +4,6 @@ module ProductsHelper
   end
 
   def labelize el
-  	content_tag(:span, el, class: "label label-info")
+  	content_tag(:span, el.titleize, class: "label label-info removable")
   end
 end

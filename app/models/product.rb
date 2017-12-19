@@ -8,7 +8,7 @@ class Product < ActiveRecord::Base
 
   def features_list=(text)
     self.features = []
-    text.split(" ").map(&:downcase).uniq.each do |f|
+    text.split(" ").map(&:downcase).map(&:strip).uniq.each do |f|
       self.features << f.presence
     end
     save!
@@ -20,11 +20,5 @@ class Product < ActiveRecord::Base
 
   def score_for ary
     (1.0*matched_against(ary).size/(ary.size)).round(2)
-  end
-
-  private 
-
-  def uniquize_features!
-
   end
 end

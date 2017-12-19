@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :fetch_features, only: [:show, :search, :edit]
+  before_action :fetch_features, only: [:show, :search, :edit, :new, :create]
   # GET /products
   # GET /products.json
   def index

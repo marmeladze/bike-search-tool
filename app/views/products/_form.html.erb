@@ -21,12 +21,13 @@
   </div>
   <div class="field">
     <%= f.label :features %><br>
-    <input type="text" id="tags-view" value="">
+    <input type="text" id="tags-view" placeholder="Start typing..." value="">
     <%= f.hidden_field :features_list %>
   </div>
   <hr />
+  <p class="info-text"></p>
   <div id="tags">
-    
+    <%= flattened(@product.features).html_safe unless @product.features.nil? %>
   </div>
   <hr />
   <div class="actions">
