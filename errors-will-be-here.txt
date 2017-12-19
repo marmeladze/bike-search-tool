@@ -1,0 +1,174 @@
+=> Booting WEBrick
+=> Rails 4.2.8 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+
+
+Started GET "/products/3/edit" for ::1 at 2017-12-19 03:49:08 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered products/_form.html.erb (11.5ms)
+  Rendered products/edit.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 250ms (Views: 234.5ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/products/3" for ::1 at 2017-12-19 03:49:23 +0400
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hLsgvNpnuFZxyPh09u9OFyDuk18/D7Hr4wCY2sfIv/HzIIxn3phiBTPCembJ0jXYeuXs6+StHxIB46NfmneEzg==", "product"=>{"name"=>"Cycletron 8000", "manufacturer_url"=>"bikeomatic2000.com", "features"=>"steel basket painted flying"}, "commit"=>"Update Product", "id"=>"3"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mProduct Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (2.0ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.5ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.4ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.1ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m
+  [1m[35mProduct Exists (0.2ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1
+  [1m[36mProduct Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "products" WHERE ("products"."name" = 'Cycletron 8000' AND "products"."id" != 3) LIMIT 1[0m

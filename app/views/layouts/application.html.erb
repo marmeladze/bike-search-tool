@@ -1,19 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html>
+<head>
+  <title>Bikesearch</title>
+  <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="no-print">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <nav class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+ 
+    <div class="row">
+      <div class="col-md-12">
+        <%= yield %>            
+      </div>
+    </div>
+  </div>
 
-    <title><%= content_for?(:title) ? yield(:title) : "Bike Search" %></title>
-
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= csrf_meta_tags %>
-  </head>
-
-  <body>
-
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
-  </body>
+</body>
 </html>

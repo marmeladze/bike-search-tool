@@ -1,0 +1,26 @@
+  <%= form_tag search_products_path, method: :get  do %>
+    <div class="row">
+    <% @features.each do |feature| %>
+      <div class="col-md-2">
+        <%= check_box_tag "feature[]", feature, ( params[:feature] ? params[:feature].include?(feature) : false ) %>
+        <%= feature.titleize %>
+      </div>
+    <% end %>
+    </div>
+    <%= submit_tag "Search", class: "btn btn-info" %>
+  <% end %>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Results</h2>
+    <% if @products.present? %>
+      <% @products.each do |product| %>
+        <div class="well">
+          <%= number_to_percentage(product.score_for(@selected)*100, precision: 0) %> match: <%= product.name %>
+          Matches <%= flattened product.features %>
+          Link: <%= product.manufacturer_url %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
