@@ -21,8 +21,14 @@
   </div>
   <div class="field">
     <%= f.label :features %><br>
-    <%= f.text_field :features_list %>
+    <input type="text" id="tags-view" value="">
+    <%= f.hidden_field :features_list %>
   </div>
+  <hr />
+  <div id="tags">
+    
+  </div>
+  <hr />
   <div class="actions">
     <%= f.submit %>
   </div>
